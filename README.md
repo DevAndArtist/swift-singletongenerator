@@ -34,7 +34,7 @@ Get the singleton instance or set it if it's not yet created:
     
     var myStringSingleton = String.getSingleton
     
-Two different setter for the singleton instance. Both can also return the new instance if needed. If the singleton instance is not yet created the setter will create one automatically. You can also provide the first value by yourself. This is helpful when you want initialize your instace with a custom initializer and not the designated `init()` from the `SingletonType` protocol. 
+There are two different setter to set the singleton instance. Both can return the new instance if needed. If the singleton instance is not yet created the setter will create one automatically. You can also provide the first value by yourself. This is helpful when you want initialize your instace with a custom initializer and not the designated `init()` from the `SingletonType` protocol. 
 
 ##### Setter #1:
     
@@ -74,7 +74,7 @@ To break out of the closure you also can use the second setter with a custom ope
     let customClassInstance = A( /* some custom initializing */ )
     customClassInstance.someVar = /* do as you like */
     
-    /* lets the the singleton with our custom instance */
+    /* lets set the singleton with our custom instance */
     /* this will only work if you're calling the setter */
     /* for this SingletonType for the first time */
     
