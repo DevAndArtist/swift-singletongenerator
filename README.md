@@ -82,7 +82,7 @@ To break out of the closure you also can use the second setter with a custom ope
     
     String.setSinglton « "hello world"
     
-    /* we can also like this, but I prefer my custom syntax */
+    /* we can also do it like this, but I prefer my custom syntax */
     String.self « "42"
     
 ###### TODO:
