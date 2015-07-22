@@ -42,7 +42,7 @@ There are two different setter to set the singleton instance. Both can return th
     String.setSingleton { (_) -> String in "new string" }
     
     /* we can also ignore the `(_) -> String in` like this */
-    /* thiw will now replace "new string" with new value */
+    /* this will now replace "new string" with new value */
     String.setSingleton { $0; "some other string" }
     
     String.setSingleton { (singletonInstnace) -> String in 
