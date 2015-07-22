@@ -82,9 +82,13 @@ To break out of the closure you also can use the second setter with a custom ope
     
     String.setSinglton « "hello world"
     
+    /* we can also like this, but I prefer my custom syntax */
+    String.self « "42"
+    
 ###### TODO:
  - More examples.
  - Code documentation.
+ - Wait for 2-3 needed Swift features so the generator can create true singletons.
  - Maybe some improvements to the code, when Swift 2.0 is out of beta. 
 
 
