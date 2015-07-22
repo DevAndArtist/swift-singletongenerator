@@ -29,7 +29,7 @@ public protocol SingletonType { init() }
 
 private var singletonInstances = [String: SingletonType]()
 
-extension SingletonType {
+public extension SingletonType {
 	
 	typealias SingletonInstance = Self
 	typealias SingletonMetatype = Self.Type
