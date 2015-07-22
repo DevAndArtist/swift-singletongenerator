@@ -25,7 +25,7 @@
 //  SOFTWARE.
 //
 
-public protocol SingletonType { init() }
+public protocol SingletonType { /* private */ init() } // wait for this feature to create a true singleton
 
 private var singletonInstances = [String: SingletonType]()
 
@@ -34,12 +34,12 @@ public extension SingletonType {
 	typealias SingletonInstance = Self
 	typealias SingletonMetatype = Self.Type
 	
-	// static vars will crash Xcode 7 beta 3 atm. it's confirmed bug
-	public static var getSingleton: SingletonInstance { return setSingleton { $0 } }
+	// static vars will crash Xcode 7 beta 4 atm. it's confirmed bug
+	final public static var getSingleton: SingletonInstance { return setSingleton { $0 } }
 	
-	public static var setSingleton: SingletonMetatype { return self }
+	final public static var setSingleton: SingletonMetatype { return self }
 	
-	public static func setSingleton(setter: (_: SingletonInstance) -> SingletonInstance) -> SingletonInstance {
+	final public static func setSingleton(setter: (_: SingletonInstance) -> SingletonInstance) -> SingletonInstance {
 		
 		guard let instance = singletonInstances["\(self)"] as? Self else {
 			
