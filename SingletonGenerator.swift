@@ -34,7 +34,6 @@ public extension SingletonType {
 	typealias SingletonInstance = Self
 	typealias SingletonMetatype = Self.Type
 	
-	// static vars will crash Xcode 7 beta 4 atm. it's confirmed bug
 	final public static var getSingleton: SingletonInstance { return setSingleton { $0 } }
 	
 	final public static var setSingleton: SingletonMetatype { return self }
