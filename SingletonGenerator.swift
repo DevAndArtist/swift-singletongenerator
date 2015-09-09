@@ -34,11 +34,11 @@ public extension SingletonType {
 	typealias SingletonInstance = Self
 	typealias SingletonMetatype = Self.Type
 	
-	final public static var getSingleton: SingletonInstance { return setSingleton { $0 } }
+	public static var getSingleton: SingletonInstance { return setSingleton { $0 } }
 	
-	final public static var setSingleton: SingletonMetatype { return self }
+	public static var setSingleton: SingletonMetatype { return self }
 	
-	final public static func setSingleton(setter: (_: SingletonInstance) -> SingletonInstance) -> SingletonInstance {
+	public static func setSingleton(setter: (_: SingletonInstance) -> SingletonInstance) -> SingletonInstance {
 		
 		guard let instance = singletonInstances["\(self)"] as? Self else {
 			
