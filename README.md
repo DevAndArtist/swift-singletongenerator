@@ -3,7 +3,8 @@
 
 Here is how to use the generator:
 
-```/* create/extend some structer type (struct or enum) */
+```swift
+    /* create/extend some structer type (struct or enum) */
     extension SomeValueType: SingletonType {
     
          // implement the designated initializer `init`
@@ -19,7 +20,8 @@ Here is how to use the generator:
     class A : SingletonType {
     
         required init() { /* do custom work here */ }
-    }```
+    }
+```
     
 Now lets see how it looks with an actual type:
 
