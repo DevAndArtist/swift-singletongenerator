@@ -57,7 +57,7 @@ public extension SingletonType {
 	}
 	
 	private static func restoreInstanceIfNeeded(instance1 i1: Self, instance2 i2: Self, overridable: Bool) -> Self {
-		// i1.dynamicType is AnyClass is bugged in Swift 2.0 beta
+
 		guard i1.dynamicType is AnyClass else { return i2 }
 		
 		return ((i1 as! AnyObject) !== (i2 as! AnyObject)) && !overridable ? i1 : i2
