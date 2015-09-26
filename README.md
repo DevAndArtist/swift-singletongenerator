@@ -1,4 +1,4 @@
-## Singleton Generator - Swift 2.0
+## Singleton Generator - Swift 2.1
 #### Protocol-Oriented Programming
 
 Here is how to use the generator:
@@ -95,7 +95,6 @@ String.self « "42"
  - More examples.
  - Code documentation.
  - Wait for 2-3 needed Swift features so the generator can create true singletons.
- - Maybe some improvements to the code, when Swift 2.0 is out of beta. 
 
 
 Everything is under *MIT License*.
